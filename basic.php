@@ -20,3 +20,7 @@ $nids = $query->execute();
 
 // Clean class name.
 $class = \Drupal\Component\Utility\Html::cleanCssIdentifier($string);
+
+// Image load & style.
+$image_uri = $entity->field_image->entity->getFileUri();
+$image = \Drupal\image\Entity\ImageStyle::load('large')->buildUrl($image_uri);
