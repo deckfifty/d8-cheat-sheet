@@ -1,3 +1,4 @@
+<?php
 // Load entity.
 $entity = \Drupal::entityTypeManager()->getStorage('entity_type')->load($entity_id);
 
