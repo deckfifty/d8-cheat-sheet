@@ -14,6 +14,9 @@ $response->send();
 
 // Entity query.
 $query = \Drupal::entityQuery('node')
-      ->condition('status', 1)
-      ->condition('field_product_catalog.entity.tid', $variables['term']->id());
+  ->condition('status', 1)
+  ->condition('field_product_catalog.entity.tid', $variables['term']->id());
 $nids = $query->execute();
+
+// Clean class name.
+$class = \Drupal\Component\Utility\Html::cleanCssIdentifier($string);
